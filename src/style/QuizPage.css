@@ -1,0 +1,256 @@
+/* .quiz-page {
+  width: 2000px;
+  height: 700px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-left: 900px;
+} */
+
+/* 
+
+
+
+/* QuizPage.css */
+
+body {
+ 
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.quiz-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.quiz-page::before {
+  content: "Job Aptitude Test";
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.question-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Question title */
+.question-title {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 16px;
+  padding-right: 100px; /* Make space for timer */
+  font-weight: normal;
+}
+
+/* Options styling */
+.options {
+  margin-bottom: 20px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.options input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  outline: none;
+}
+
+.options input[type="radio"]:checked {
+  border-color:rgb(235, 83, 7);
+}
+
+.options input[type="radio"]:checked::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color:rgb(237, 111, 7);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Timer styling */
+.timer {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.timer::before {
+  content: "FINISH BEFORE";
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.timer .options {
+  position: relative;
+  
+}
+
+
+.timer::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Question image */
+.question-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color:#FF6700;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button[type="submit"]:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Progress indicator */
+.progress {
+  display: none; /* Hide the default progress text */
+}
+
+/* Add pagination */
+.question-card::after {
+  content: "";
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Custom pagination display */
+.question-card::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+/* For the pagination numbers (this will be visible but simpler than image) */
+.quiz-page::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for numbered options */
+.options label:nth-child(1)::before {
+  content: "○";
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.options label:nth-child(2)::before {
+  content: "○";
+  margin-right: 8px; 
+  font-size: 18px;
+}
+
+.options label:nth-child(3)::before {
+  content: "○";
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Adjustments for the real timer countdown */
+.timer span, .timer div {
+  position: relative;
+  font-size: 18px; 
+  font-weight: bold;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+/* Dropdown styling for select box if present */
+select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Timer animation adjustments */
+@keyframes countdown {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 283; } /* 2πr where r = 45px */
+}
+
+/* Fix for the timer text arrangement */
+.timer {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+}

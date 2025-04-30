@@ -1,0 +1,38 @@
+.standout-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+   
+    min-height: 300px;
+  }
+  
+  .image-section {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-section img {
+    max-width: 65%;
+    height: auto;
+  }
+  
+  .text-section {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 30px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0;
+  }
+  
+  h1 span {
+    color: #ff6b00;
+  }

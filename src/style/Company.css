@@ -1,0 +1,23 @@
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 60px;
+  
+    max-width: 100%;
+  }
+  
+  .logos img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    padding-top: 100px;
+  }
+  .Htitle h1{
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    
+  }
+  

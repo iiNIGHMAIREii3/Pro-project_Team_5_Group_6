@@ -1,0 +1,27 @@
+.cta-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+   
+  }
+  
+  .cta-button {
+    background-color: #FF6700;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  
+  }
+  
+  .cta-button:hover {
+    background-color: #FF6700;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button:active {
+    transform: translateY(0);
+  }

@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  font-family: Arial, sans-serif;
+  /* Light cream background to match the design */
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.nav span {
+  color: #ff6b00;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.nav span:hover {
+  text-decoration: underline;
+}

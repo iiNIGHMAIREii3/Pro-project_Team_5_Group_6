@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.accepted-page {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.accepted-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.accepted-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.success-icon {
+  margin-bottom: 2rem;
+}
+
+.success-image {
+  width: 20px;
+  height: 20px;
+}
+
+.congratulations-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.back-button,
+.details-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.back-button {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  color: #666;
+}
+
+.back-button:hover {
+  background: #eeeeee;
+}
+
+.details-button {
+  background: #1A1A1A;
+  color: white;
+  border: none;
+}
+
+.details-button:hover {
+  background: #333;
+}
+
+/* Support for forced-colors mode */
+@media (forced-colors: active) {
+  .back-button,
+  .details-button {
+    border: 1px solid ButtonText;
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+
+  .details-button {
+    border: 1px solid ButtonText;
+  }
+
+  .back-button:hover,
+  .details-button:hover {
+    background-color: ButtonFace;
+    border-color: Highlight;
+    color: Highlight;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .accepted-card {
+    padding: 2rem;
+  }
+
+  .congratulations-title {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .back-button,
+  .details-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 

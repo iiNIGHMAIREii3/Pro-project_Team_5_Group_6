@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.Htxt1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+    color: black;
+}
+
+/* Steps Container */
+
+
+/* Individual Step */
+.step {
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+    width: 30%; /* Set a fixed width for each step */
+    min-width: 250px; /* Minimum width for each step */
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-20px);
+    
+}
+
+/* Icons */
+.icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    
+}
+
+/* Titles */
+.Htitle1, .Htitle2, .Htitle3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+/* Descriptions */
+.Htxt1, .Htxt2, .Htxt3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+    display:flex;
+     
+}
+.HowSteps{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+    padding: 20px;
+    padding-right: 35px;
+}
+.Htxt1{
+    padding-left: 20%;
+}
+
+ 
+  

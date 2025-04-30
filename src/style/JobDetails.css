@@ -1,0 +1,38 @@
+.job-details {
+    color: #333;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #1a1f47;
+  }
+  
+  .section p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .section li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.4;
+  }
+  
+  .section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+  }

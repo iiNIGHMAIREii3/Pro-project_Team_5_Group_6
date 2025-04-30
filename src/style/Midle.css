@@ -1,0 +1,29 @@
+/* General Styles */
+
+  
+  
+.imagemidle img{
+  width: 1200px;
+  height: 450px;
+  display: flex;
+
+ justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+ 
+
+  
+}
+
+.Htxt1 h1{
+font-size: 60px;
+padding-right: 350px;
+
+}
+.imagemidle,.Htxt1{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
